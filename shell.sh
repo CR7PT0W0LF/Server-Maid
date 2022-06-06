@@ -14,7 +14,6 @@ clear
 sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd rsh-server rsh-redone-server
 #normal utils for seeing system resources and changing config files
  sudo apt install screen -y
- sudo apt install atop -y 
  sudo apt install htop -y
  sudo apt install neovim -y
  sudo apt install net-tools -y
