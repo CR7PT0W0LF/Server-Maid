@@ -23,7 +23,7 @@ sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd r
  clear
   sudo mkdir Server
   cd Server
-   sudo apt install openjdk-17-jre-headless
+   sudo apt install openjdk-17-jre-headless -y
    sudo wget https://github.com/ServerJars/updater/releases/download/v3.0.0/ServerJars-3.jar
 chmod +x ServerJars-3 
     cd 
