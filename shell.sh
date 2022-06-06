@@ -27,6 +27,7 @@ sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd r
 chmod +x ServerJars-3 
      
     #This is a program that allows you TCP Tunnel your Servers so you don't have to port foward. Make sure to setup a accout 
+     cd -
      mkdir TCP-Tunnel
      cd TCP-Tunnel
      sudo wget https://playit.gg/downloads/playit-0.8.1-beta
