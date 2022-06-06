@@ -6,6 +6,4 @@ A simple bash script that installs everything necessary to make your VPS into a 
 
 
 
-
-https://user-images.githubusercontent.com/56493038/172096029-f6334164-fb6b-4b4d-9e0c-09c4a8b075f6.mp4
-
+![giphy](https://user-images.githubusercontent.com/56493038/172096719-cc72da64-fdaf-45af-89f3-490eb09d75e0.gif)
