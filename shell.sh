@@ -23,7 +23,7 @@ sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd r
   
   cd Minecraft
    sudo apt install openjdk-17-jre-headless -y
-   sudo wget https://github.com/ServerJars/updater/releases/download/v3.0.0/ServerJars-3.jar
+   sudo wget https://github.com/ServerJars/updater/releases/download/v3.2.2/ServerJars.jar
 chmod +x ServerJars-3 
      
     #This is a program that allows you TCP Tunnel your Servers so you don't have to port foward. Make sure to setup a accout 
