@@ -18,7 +18,9 @@ sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd r
  sudo apt install net-tools -y
  sudo apt install speedtest-cli -y
  sudo apt install curl -y 
-
+ sudo apt install snapd =y
+ sudo snap install core -y 
+ sudo apt install git -y
  clear
   
   cd Minecraft
@@ -30,8 +32,13 @@ chmod +x ServerJars-3
      cd -
      mkdir TCP-Tunnel
      cd TCP-Tunnel
-     sudo wget https://playit.gg/downloads/playit-0.8.1-beta
-     sudo chmod +x playit-0.8.1-beta
+     #playit system
+      curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
+     sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
+     sudo apt update
+     sudo apt install playit
+#Ngrok TCP Tunnel
+     sudo snap install ngrok
        clear
        cd - 
        sudo add-apt-repository multiverse
