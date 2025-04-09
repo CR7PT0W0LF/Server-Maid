@@ -3,7 +3,7 @@ clear
 sudo apt install figlet -y
 clear
 figlet Server Maid
-echo "this might take a minute. go grab a redbull"
+echo "this might take a minute. go grab a Dr. Pepper or something"
 sleep 3
 #Minecraft server install
 mkdir Minecraft
@@ -24,8 +24,8 @@ sudo apt-get --purge remove xinetd nis yp-tools tftpd atftpd tftpd-hpa telnetd r
  clear
   
   cd Minecraft
-   sudo apt install openjdk-17-jre-headless -y
-   sudo wget https://github.com/ServerJars/updater/releases/download/v3.2.2/ServerJars.jar
+   sudo apt install openjdk-21-jre-headless -y
+   sudo wget https://piston-data.mojang.com/v1/objects/e6ec2f64e6080b9b5d9b471b291c33cc7f509733/server.jar
 chmod +x ServerJars-3 
      
     #This is a program that allows you TCP Tunnel your Servers so you don't have to port foward. Make sure to setup a accout 
@@ -33,14 +33,15 @@ chmod +x ServerJars-3
      mkdir TCP-Tunnel
      cd TCP-Tunnel
      #playit system
-      curl -SsL https://playit-cloud.github.io/ppa/key.gpg | sudo apt-key add -
-     sudo curl -SsL -o /etc/apt/sources.list.d/playit-cloud.list https://playit-cloud.github.io/ppa/playit-cloud.list
-     sudo apt update
-     sudo apt install playit
-#Ngrok TCP Tunnel
-     sudo snap install ngrok
-       clear
-       cd - 
+      curl -SsL https://playit-cloud.github.io/ppa/key.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/playit.gpg >/dev/null
+      if [ $? -ne 0 ]; then
+          echo "Error: Failed to download or process the GPG key."
+          exit 1
+      fi
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/playit.gpg] https://playit-cloud.github.io/ppa/data ./" | sudo tee /etc/apt/sources.list.d/playit-cloud.list
+sudo apt update
+sudo apt install playit
+
        sudo add-apt-repository multiverse
  sudo dpkg --add-architecture i386
  sudo apt update
@@ -59,6 +60,5 @@ sleep 5
 
 
      
-
 
 
